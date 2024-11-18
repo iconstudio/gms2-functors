@@ -1,2 +1,14 @@
-# gms2-functors
-Functor library for GameMaker
+# Functors for GameMaker
+
+# Contents
+
+## Setter
+
+## Property
+
+## Functor
+
+## Delegate
+
+## FunctionBinder
+
