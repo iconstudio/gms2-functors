@@ -11,11 +11,11 @@ function Functor() constructor
 	/// @self Functor
 	static Invoke = function()
 	{
-		RaiseNullReferenceFound(isdef(myContext), "myContext")
+		RaiseNullReferenceFound(not is_undefined(myContext), "myContext")
 
 		if weak_ref_alive(myContext)
 		{
-			RaiseNullReferenceFound(isdef(myRunner), "myRunner")
+			RaiseNullReferenceFound(not is_undefined(myRunner), "myRunner")
 
 			if 0 < argument_count
 			{
@@ -46,11 +46,11 @@ function Functor() constructor
 	/// @self Functor
 	static InvokeFrom = function(params)
 	{
-		RaiseNullReferenceFound(isdef(myContext), "myContext")
+		RaiseNullReferenceFound(not is_undefined(myContext), "myContext")
 
 		if weak_ref_alive(myContext)
 		{
-			RaiseNullReferenceFound(isdef(myRunner), "myRunner")
+			RaiseNullReferenceFound(not is_undefined(myRunner), "myRunner")
 
 			with myContext.ref
 			{

@@ -95,14 +95,14 @@ function Delegate() constructor
 					var context = functor.myContext
 					var runner = functor.myRunner
 
-					if isdef(context) and weak_ref_alive(context)
+					if not is_undefined(context) and weak_ref_alive(context)
 					{
 						with context.ref
 						{
 							script_execute_ext(runner, params)
 						}
 					}
-					else if isdef(runner)
+					else if not is_undefined(runner)
 					{
 						script_execute_ext(runner, params)
 					}
@@ -122,11 +122,11 @@ function Delegate() constructor
 					var context = functor.myContext
 					var runner = functor.myRunner
 
-					if isdef(context) and weak_ref_alive(context)
+					if not is_undefined(context) and weak_ref_alive(context)
 					{
 						functor.Invoke()
 					}
-					else if isdef(runner)
+					else if not is_undefined(runner)
 					{
 						functor.Invoke()
 					}
@@ -172,7 +172,7 @@ function Delegate() constructor
 				{
 					var context = lhs.myContext
 
-					return isdef(context) and context.ref != rhs
+					return not is_undefined(context) and context.ref != rhs
 				},
 				rhs : target
 			}

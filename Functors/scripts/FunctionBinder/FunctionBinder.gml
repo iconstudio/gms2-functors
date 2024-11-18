@@ -13,7 +13,7 @@ function FunctionBinder(fun) constructor
 	/// @self FunctionBinder
 	static AddPlaceholder = function(placeholder)
 	{
-		Assert(isdef(placeholder), "Null reference found at the parameter 'placeholder'.")
+		Assert(not is_undefined(placeholder), "Null reference found at the parameter 'placeholder'.")
 
 		var index = placeholder.GetIndex()
 		Assert(not array_contains(preplacedParams, index), $"Duplicated placed parameters are not allowed at {index}.")
@@ -54,7 +54,7 @@ function FunctionBinder(fun) constructor
 			for (var i = 0; i < len; ++i)
 			{
 				var placeholder = myPlaceholders[i]
-				Assert(isdef(placeholder), "Null reference found.")
+				Assert(not is_undefined(placeholder), "Null reference found.")
 
 				var index = placeholder.GetIndex()
 				Assert(0 <= index, "Invalid placeholder, cannot use negative index.")

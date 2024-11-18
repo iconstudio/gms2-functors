@@ -116,7 +116,7 @@ function Property() constructor
 				myValue = mySetter.Invoke(myValue, value)
 			}
 		}
-		else if isundef(mySetter)
+		else if  is_undefined(mySetter)
 		{
 			Assert(argument_count == 1, "Null reference found at the setter while getting invoked with multiple parameters.")
 
@@ -144,7 +144,7 @@ function Property() constructor
 		{
 			return myGetter.Invoke(myValue)
 		}
-		else if isundef(myGetter)
+		else if  is_undefined(myGetter)
 		{
 			return myValue
 		}

@@ -25,6 +25,7 @@
   "name":"Functors",
   "resources":[
     {"id":{"name":"oBall","path":"objects/oBall/oBall.yy",},},
+    {"id":{"name":"oCircle","path":"objects/oCircle/oCircle.yy",},},
     {"id":{"name":"oExample","path":"objects/oExample/oExample.yy",},},
     {"id":{"name":"roomExample","path":"rooms/roomExample/roomExample.yy",},},
     {"id":{"name":"Assert","path":"scripts/Assert/Assert.yy",},},
